@@ -14,7 +14,7 @@ class OBJECT &OBJECT::operator=(class OBJECT const &object)
     return *this;
 }
 
-unsigned __int64 OBJECT::QueryClassId(void)const
+uint64_t OBJECT::QueryClassId(void)const
 {
     return this->class_descriptor->self;
 }
@@ -29,17 +29,17 @@ class CLASS_DESCRIPTOR const *OBJECT::GetClassDescriptor(void)
     return this->class_descriptor;
 }
 
-unsigned char OBJECT::IsSameObject(class OBJECT const *object)const
+uchar OBJECT::IsSameObject(class OBJECT const *object)const
 {
     return this == object;
 }
 
-unsigned char OBJECT::IsSameClass(class OBJECT const *object)const
+uchar OBJECT::IsSameClass(class OBJECT const *object)const
 {
     return this->class_descriptor->self == object->class_descriptor->self;
 }
 
-void OBJECT::DebugDump(unsigned char)const
+void OBJECT::DebugDump(uchar)const
 {
     ;
 }

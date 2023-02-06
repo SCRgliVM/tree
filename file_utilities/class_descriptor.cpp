@@ -2,8 +2,8 @@
 
 CLASS_DESCRIPTOR::CLASS_DESCRIPTOR(void){};
 
-unsigned char CLASS_DESCRIPTOR::Initialize(char const *)
+uchar CLASS_DESCRIPTOR::Initialize(char const *)
 {
-    this->self = reinterpret_cast<__int64>(this);
+    this->self = reinterpret_cast<uint64_t>(this);
     return 1;
 };
